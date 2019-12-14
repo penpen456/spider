@@ -18,6 +18,7 @@ import re
 import threading
 import queue
 import time
+import os
 
 
 def req(url_queue):
@@ -71,6 +72,8 @@ def req(url_queue):
 if __name__ == "__main__":
     # 忽略ssl警告
     requests.packages.urllib3.disable_warnings()
+    # 创建目录
+    os.mkdir('./我当阴阳先生的那几年')
     start = time.time()
     # 集数队列
     url_queue = queue.Queue()
